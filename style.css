@@ -305,8 +305,32 @@ width: 800px;
   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: 1800% 1800%;
   
-  -webkit-animation: rainbow 5s ease infinite;
-  -z-animation: rainbow 5s ease infinite;
-  -o-animation: rainbow 5s ease infinite;
-    animation: rainbow 5s ease infinite;
+  -webkit-animation: rainbow 2s ease infinite;
+  -z-animation: rainbow 2s ease infinite;
+  -o-animation: rainbow 2s ease infinite;
+    animation: rainbow 2s ease infinite;
+}
+
+.div1 .bubbly-button, .div2 .bubbly-button, .div3 .bubbly-button, .div4 .bubbly-button, .div5 .bubbly-button{
+  animation-duration: 2s;
+}
+
+.div6 .bubbly-button, .div7 .bubbly-button, .div8 .bubbly-button, .div9 .bubbly-button, .div10 .bubbly-button{
+  animation-duration: 4s;
+}
+
+.div11 .bubbly-button, .div12 .bubbly-button, .div13 .bubbly-button, .div14 .bubbly-button, .div15 .bubbly-button{
+  animation-duration: 6s;
+}
+
+.div16 .bubbly-button, .div17 .bubbly-button, .div18 .bubbly-button, .div19 .bubbly-button, .div20 .bubbly-button{
+  animation-duration: 6s;
+}
+
+.div21 .bubbly-button, .div22 .bubbly-button, .div23 .bubbly-button, .div24 .bubbly-button, .div25 .bubbly-button{
+  animation-duration: 4s;
+}
+
+.div26 .bubbly-button, .div27 .bubbly-button, .div28 .bubbly-button, .div29 .bubbly-button, .div30 .bubbly-button{
+  animation-duration: 2s;
 }
