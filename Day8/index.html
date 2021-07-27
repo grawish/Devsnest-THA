@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THA - 8</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<style>
+    body
+    {
+        top: 50%;
+        left: 50%;  
+    }
+    .container
+    {
+        display: flex;
+        width: 32%;
+        height: 50px;
+        margin: auto;
+        margin-top: 120px;
+    }
+    .row{
+            content:"";            
+            display: table;
+    }
+     .col{
+            width: 35px;
+            height: 35px;
+            float: left;   
+            background-color:grey;
+            border: 1px solid black;
+    }
+    .selected
+    {
+        background-color:blue;
+    }
+    .container{
+        top: 50%;
+        left: 50%;
+    }
+</style>
+
+<body>
+    <div class="container">
+    <div class=row>
+        <div class="col selected"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col selected"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col selected"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col selected"></div>
+        <div class="col"></div> 
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col selected"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col selected"></div>
+        <div class="col"></div> 
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col selected"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col selected"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col selected"></div>  
+    </div>
+</div>
+</body>
+<script>
+    var cols=document.querySelectorAll('div.col');;
+    console.log(cols);
+    cols.forEach(c =>{
+    c.addEventListener('click',()=>{
+        if(c.classList.contains("selected")){
+            c.classList.remove("selected");
+        }
+        else{
+        c.classList.add("selected");
+        }
+    })
+ }
+)     
+//$(document).ready(function (){
+  //  $('.col').click(function(){
+    //    $(this).css("background","blue");
+    //})
+   //});
+</script>
+</html>

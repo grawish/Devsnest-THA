@@ -1,0 +1,236 @@
+:root {
+  --fuschia: #ff0081;
+  --button-bg: #ff0081;
+  --button-text-color: #fff;
+  --baby-blue: #f8faff;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  background-color: var(--baby-blue);
+
+  display: flex;
+  justify-content: center;
+}
+
+.bubbly-button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: -webkit-transform ease-in 0.1s, -webkit-box-shadow ease-in 0.25s;
+  transition: -webkit-transform ease-in 0.1s, -webkit-box-shadow ease-in 0.25s;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s, -webkit-transform ease-in 0.1s, -webkit-box-shadow ease-in 0.25s;
+  -webkit-box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+          box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+
+.bubbly-button:focus {
+  outline: 0;
+}
+
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--button-bg) 20%, transparent 30%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--button-bg) 15%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--button-bg) 15%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%), radial-gradient(circle, var(--button-bg) 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.bubbly-button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-color: var(--button-bg), 5%;
+  -webkit-box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+          box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+.bubbly-button.animate:before {
+  display: block;
+  -webkit-animation: topBubbles ease-in-out 0.75s forwards;
+          animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button.animate:after {
+  display: block;
+  -webkit-animation: bottomBubbles ease-in-out 0.75s forwards;
+          animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@-webkit-keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+@-webkit-keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+/* --------------------------------- my css --------------------------------- */
+a {
+  text-decoration: none;
+  color: var(--button-text-color);
+}
+
+button{
+  width: 115px;
+}
+
+.parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(6, 100px);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+width: 800px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 1 / 4 / 2 / 5; }
+.div5 { grid-area: 1 / 5 / 2 / 6; }
+.div6 { grid-area: 2 / 1 / 3 / 2; }
+.div7 { grid-area: 2 / 2 / 3 / 3; }
+.div8 { grid-area: 2 / 3 / 3 / 4; }
+.div9 { grid-area: 2 / 4 / 3 / 5; }
+.div10 { grid-area: 2 / 5 / 3 / 6; }
+.div11 { grid-area: 3 / 1 / 4 / 2; }
+.div12 { grid-area: 3 / 2 / 4 / 3; }
+.div13 { grid-area: 3 / 3 / 4 / 4; }
+.div14 { grid-area: 3 / 4 / 4 / 5; }
+.div15 { grid-area: 3 / 5 / 4 / 6; }
+.div16 { grid-area: 4 / 1 / 5 / 2; }
+.div17 { grid-area: 4 / 2 / 5 / 3; }
+.div18 { grid-area: 4 / 3 / 5 / 4; }
+.div19 { grid-area: 4 / 4 / 5 / 5; }
+.div20 { grid-area: 4 / 5 / 5 / 6; }
+.div21 { grid-area: 5 / 1 / 6 / 2; }
+.div22 { grid-area: 5 / 2 / 6 / 3; }
+.div23 { grid-area: 5 / 3 / 6 / 4; }
+.div24 { grid-area: 5 / 4 / 6 / 5; }
+.div25 { grid-area: 5 / 5 / 6 / 6; }
+.div26 { grid-area: 6 / 1 / 7 / 2; }
+.div27 { grid-area: 6 / 2 / 7 / 3; }
+.div28 { grid-area: 6 / 3 / 7 / 4; }
+.div29 { grid-area: 6 / 4 / 7 / 5; }
+.div30 { grid-area: 6 / 5 / 7 / 6; }
+/*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width:800px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(10, 100px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 450px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 1 / 3 / 2 / 4; }
+    .div4 { grid-area: 2 / 1 / 3 / 2; }
+    .div5 { grid-area: 2 / 2 / 3 / 3; }
+    .div6 { grid-area: 2 / 3 / 3 / 4; }
+    .div7 { grid-area: 3 / 1 / 4 / 2; }
+    .div8 { grid-area: 3 / 2 / 4 / 3; }
+    .div9 { grid-area: 3 / 3 / 4 / 4; }
+    .div10 { grid-area: 4 / 1 / 5 / 2; }
+    .div11 { grid-area: 4 / 2 / 5 / 3; }
+    .div12 { grid-area: 4 / 3 / 5 / 4; }
+    .div13 { grid-area: 5 / 1 / 6 / 2; }
+    .div14 { grid-area: 5 / 2 / 6 / 3; }
+    .div15 { grid-area: 5 / 3 / 6 / 4; }
+    .div16 { grid-area: 6 / 1 / 7 / 2; }
+    .div17 { grid-area: 6 / 2 / 7 / 3; }
+    .div18 { grid-area: 6 / 3 / 7 / 4; }
+    .div19 { grid-area: 7 / 1 / 8 / 2; }
+    .div20 { grid-area: 7 / 2 / 8 / 3; }
+    .div21 { grid-area: 7 / 3 / 8 / 4; }
+    .div22 { grid-area: 8 / 1 / 9 / 2; }
+    .div23 { grid-area: 8 / 2 / 9 / 3; }
+    .div24 { grid-area: 8 / 3 / 9 / 4; }
+    .div25 { grid-area: 9 / 1 / 10 / 2; }
+    .div26 { grid-area: 9 / 2 / 10 / 3; }
+    .div27 { grid-area: 9 / 3 / 10 / 4; }
+    .div28 { grid-area: 10 / 1 / 11 / 2; }
+    .div29 { grid-area: 10 / 2 / 11 / 3; }
+    .div30 { grid-area: 10 / 3 / 11 / 4; }
+}
